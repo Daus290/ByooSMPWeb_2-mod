@@ -16,24 +16,46 @@ section {
 
 .navbar-brand {
     color: white;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-link {
+    position: relative;
     color: white;
     font-size: 17px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
     color: #2ce077;
-    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* ketebalan underline */
+    background-color: #ffffff;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 79%;
 }
 
 
+
+
 /* Section - Tentang Kami */
-#tentang-kami {
+.home {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-image: url("../gambar/gambarByoo1.jpeg");
     background-size: cover;
     background-position: center;
@@ -42,14 +64,29 @@ section {
     min-height: 100vh;
 }
 
-.tentang-kami-huruf {
+.home-huruf {
     color: white;
 }
 
-.tentang-kami-huruf h1 {
+.home-huruf h1 {
     font-weight: 550;
 }
 
-.tentang-kami-huruf p {
+.home-huruf p {
     font-weight: 400;
+}
+
+
+/* Section - About */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../gambar/gambarByoo2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
 }
