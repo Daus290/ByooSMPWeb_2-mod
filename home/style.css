@@ -9,6 +9,16 @@ section {
     position: relative; 
 }
 
+.judul {
+    font-weight: 550;
+    color: white;
+}
+
+.paragraf {
+    font-weight: 400;
+    color: white;
+}
+
 /* Navbar */
 #header {
     position: sticky;
@@ -105,14 +115,6 @@ section {
     color: white;
 }
 
-.home-huruf h1 {
-    font-weight: 550;
-}
-
-.home-huruf p {
-    font-weight: 400;
-}
-
 
 /* Section - About */
 .about {
@@ -126,4 +128,11 @@ section {
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
+}
+
+
+.footer {
+    background: linear-gradient(135deg, rgb(15, 8, 59), rgb(13, 10, 32));
+    color: white;
+    font-size: 12px;
 }
