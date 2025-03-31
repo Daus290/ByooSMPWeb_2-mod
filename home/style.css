@@ -97,7 +97,7 @@ section {
 }
 
 
-/* Section - Tentang Kami */
+/* Section - Home */
 .home {
     display: flex;
     align-items: center;
@@ -131,8 +131,34 @@ section {
 }
 
 
+/* Section - Player */
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../gambar/gambarByoo3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Footer */
 .footer {
-    background: linear-gradient(135deg, rgb(15, 8, 59), rgb(13, 10, 32));
-    color: white;
+    background: linear-gradient(135deg, rgb(16, 18, 59), rgb(0, 0, 0));
     font-size: 12px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover {
+    color: rgba(255, 143, 15, 0.961);
+    transition: color 0.4s ease-in-out;
+    text-decoration: underline;
 }
