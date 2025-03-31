@@ -11,7 +11,44 @@ section {
 
 /* Navbar */
 #header {
-    background: linear-gradient(135deg,#2ce077, #2039d8);;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    /* background: linear-gradient(135deg,#2ce077, #2039d8); */
+    /* background: linear-gradient(135deg, #048a3c, #2039d8); */
+    background: linear-gradient(135deg,#2039d8, #048a3c);
+}
+
+#header.scrolled {
+    background: white;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header.scrolled .nav-link {
+    color: black;
+}
+
+#header.scrolled .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+    height: 1px;
+    background-color: black; /* Warna underline saat discroll */
+}
+
+#header.scrolled .nav-link:hover::after {
+    width: 79%; /* Sama seperti hover */
+}
+
+#header.scrolled .nav-link:hover {
+    color: #2ce077;
+}
+
+#header.scrolled .navbar-brand{
+    color: black;
 }
 
 .navbar-brand {
@@ -29,7 +66,9 @@ section {
 }
 
 .nav-link:hover {
-    color: #2ce077;
+    /* color: #2ce077; */
+
+    color: #3c76ff;
 }
 
 .nav-link::after {
@@ -46,8 +85,6 @@ section {
 .nav-link:hover::after {
     width: 79%;
 }
-
-
 
 
 /* Section - Tentang Kami */
