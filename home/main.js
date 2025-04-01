@@ -34,10 +34,8 @@ $(document).ready(function () {
         });
     }, { threshold: 0.2 });
 
-    // Seleksi elemen yang akan dianimasikan
     let elements = $('h1, p, .player-list-item, .btn');
 
-    // Tambahkan class fade-element dan observasi elemen
     elements.each(function () {
         $(this).addClass('fade-element');
         observer.observe(this);
