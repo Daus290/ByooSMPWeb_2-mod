@@ -133,7 +133,27 @@ header, section, footer {
 }
 
 .tombol-about-link-div {
-    /* margin-left: px; sss*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-tombol-about-kiri, .btn-tombol-about-kanan {
+    width: 270px;
+    padding: 10px 0;
+    background: rgba(255, 51, 0, 0.3);
+    color: #FFC108;
+    border: 2px solid rgb(253, 139, 0);
+    border-radius: 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-tombol-about-kiri:hover, .btn-tombol-about-kanan:hover {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    border-color: rgb(220, 216, 216);
 }
 
 
@@ -190,6 +210,11 @@ header, section, footer {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     pointer-events: none; /*jaga2 spy tdk mengganggu hover*/
+}
+
+.player .player-list-item:hover {
+    color: #22dd3e;
+    transition: color 0.3s ease;
 }
 
 .player .player-list-item:hover::before {
