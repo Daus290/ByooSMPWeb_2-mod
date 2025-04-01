@@ -21,6 +21,7 @@ header, section, footer {
 }
 
 
+
 /* Navbar */
 #header {
     position: sticky;
@@ -100,6 +101,7 @@ header, section, footer {
 }
 
 
+
 /* Section - Home */
 .home {
     display: flex;
@@ -117,6 +119,7 @@ header, section, footer {
 .home-huruf {
     color: white;
 }
+
 
 
 /* Section - About */
@@ -156,6 +159,7 @@ header, section, footer {
     color: white;
     border-color: rgb(220, 216, 216);
 }
+
 
 
 /* Section - Player */
@@ -247,10 +251,9 @@ header, section, footer {
     transition: color 0.4s ease-in-out, text-decoration 0.4s ease-in;
 }
 
-.footer .footer-copyright  {
-    /* margin-top: 12px; */
-}
 
+
+/* Media Query */
 @media (max-width: 768px) {
     .about-mediaq {
         margin-bottom: 50px;
@@ -262,7 +265,8 @@ header, section, footer {
 }
 
 
-/*Observer Scroll Viewport*/
+
+/*observer scroll viewport*/
 .fade-element {
     opacity: 0;
     transform: translateY(20px);

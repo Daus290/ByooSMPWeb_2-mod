@@ -23,25 +23,23 @@ $(document).ready(function() {
 
 
 //observer viewport scroll
-function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible')
-        }
-    });
-}
+$(document).ready(function () {
+    let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('visible');
+            } else {
+                $(entry.target).removeClass('visible');
+            }
+        });
+    }, { threshold: 0.2 });
 
-const observer = new IntersectionObserver(handleIntersection, {
-    root: null,
-    threshold: 0.2
-});
+    // Seleksi elemen yang akan dianimasikan
+    let elements = $('h1, p, .player-list-item, .btn');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('h1, p, .player-list-item, .btn');
-    elements.forEach(element => {
-        element.classList.add('fade-element'); 
-        observer.observe(element);
+    // Tambahkan class fade-element dan observasi elemen
+    elements.each(function () {
+        $(this).addClass('fade-element');
+        observer.observe(this);
     });
 });
