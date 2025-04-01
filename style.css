@@ -147,7 +147,7 @@ header, section, footer {
     width: 270px;
     padding: 10px 0;
     background: rgba(255, 51, 0, 0.3);
-    color: #FFC108;
+    color: white;
     border: 2px solid rgb(253, 139, 0);
     border-radius: 0;
     font-size: 1rem;
@@ -155,8 +155,8 @@ header, section, footer {
 }
 
 .btn-tombol-about-kiri:hover, .btn-tombol-about-kanan:hover {
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
+    background: rgba(213, 7, 7, 0.5);
+    color: #FFC108;
     border-color: rgb(220, 216, 216);
 }
 
