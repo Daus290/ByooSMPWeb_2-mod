@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-section {
+header, section, footer {
     position: relative; 
 }
 
@@ -19,51 +19,48 @@ section {
     color: white;
 }
 
+
 /* Navbar */
 #header {
     position: sticky;
     top: 0;
     z-index: 1;
-    width: 100%;
-    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    /* background: linear-gradient(135deg,#2ce077, #2039d8); */
-    /* background: linear-gradient(135deg, #048a3c, #2039d8); */
-    background: linear-gradient(135deg,#2039d8, #048a3c);
+    background-color: white;
+    transition: background-color 0.6s ease-in-out;
 }
 
-#header.scrolled {
-    background: white;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#header.scrolled .nav-link {
-    color: black;
-}
-
-#header.scrolled .nav-link::after {
+#header::after {
     content: "";
     position: absolute;
-    left: 8px;
-    bottom: 0;
-    height: 1px;
-    background-color: black; /* Warna underline saat discroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2039d8, #048a3c);
+    transition: opacity 0.6s ease-in-out;
+    z-index: -1;
+    opacity: 1;
 }
 
-#header.scrolled .nav-link:hover::after {
-    width: 79%; /* Sama seperti hover */
+#header.scrolled::after {
+    opacity: 0;
 }
 
-#header.scrolled .nav-link:hover {
-    color: #2ce077;
-}
-
-#header.scrolled .navbar-brand{
-    color: black;
+#header.scrolled-remove::after {
+    opacity: 1;
 }
 
 .navbar-brand {
     color: white;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.6s ease-in-out;
+}
+
+#header.scrolled .navbar-brand, #header.scrolled .nav-link {
+    color: black;
+}
+
+#header.scrolled .nav-link:hover {
+    color: #22dd3e;
 }
 
 .nav-link {
@@ -90,10 +87,15 @@ section {
     height: 1px; /* ketebalan underline */
     background-color: #ffffff;
     transition: width 0.4s ease-in-out;
+    z-index: 1;
 }
 
 .nav-link:hover::after {
     width: 79%;
+}
+
+#header.scrolled .nav-link::after {
+    background-color: black;
 }
 
 
@@ -130,6 +132,10 @@ section {
     min-height: 100vh;
 }
 
+.tombol-about-link-div {
+    /* margin-left: px; */
+}
+
 
 /* Section - Player */
 .player {
@@ -145,6 +151,58 @@ section {
     min-height: 100vh;
 }
 
+.player h1 {
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+.player .player-list-item {
+    position: relative;
+    list-style-type: none;
+    padding: 4px 4px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.player .player-list-item::before {  /*efek garis*/
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.player .player-list-item::after { /*efek nama asli*/
+    content: attr(data-name);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(255, 203, 30);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /*jaga2 spy tdk mengganggu hover*/
+}
+
+.player .player-list-item:hover::before {
+    width: 20%;
+    left: 40%;
+}
+
+.player .player-list-item:hover::after {
+    opacity: 1;
+}
+
+
+
 /* Footer */
 .footer {
     background: linear-gradient(135deg, rgb(16, 18, 59), rgb(0, 0, 0));
@@ -159,6 +217,10 @@ section {
 
 .footer a:hover {
     color: rgba(255, 143, 15, 0.961);
-    transition: color 0.4s ease-in-out;
     text-decoration: underline;
+    transition: color 0.4s ease-in-out, text-decoration 0.4s ease-in;
+}
+
+.footer .footer-copyright  {
+    /* margin-top: 12px; */
 }
