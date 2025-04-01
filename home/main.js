@@ -23,3 +23,25 @@ $(document).ready(function() {
 
 
 //observer viewport scroll
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible')
+        }
+    });
+}
+
+const observer = new IntersectionObserver(handleIntersection, {
+    root: null,
+    threshold: 0.2
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('h1, p, .player-list-item, .btn');
+    elements.forEach(element => {
+        element.classList.add('fade-element'); 
+        observer.observe(element);
+    });
+});

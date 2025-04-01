@@ -1,3 +1,4 @@
+/* All */
 * {
     font-family: Montserrat;
     scroll-behavior: smooth;
@@ -213,7 +214,7 @@ header, section, footer {
 }
 
 .player .player-list-item:hover {
-    color: #22dd3e;
+    color: #df33f5;
     transition: color 0.3s ease;
 }
 
@@ -248,4 +249,27 @@ header, section, footer {
 
 .footer .footer-copyright  {
     /* margin-top: 12px; */
+}
+
+@media (max-width: 768px) {
+    .about-mediaq {
+        margin-bottom: 50px;
+    }
+
+    .footer {
+        padding-left: 30px;
+    }
+}
+
+
+/*Observer Scroll Viewport*/
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-element.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
