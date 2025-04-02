@@ -253,16 +253,71 @@ header, section, footer {
 
 
 
-/* Media Query */
-@media (max-width: 768px) {
-    .about-mediaq {
-        margin-bottom: 50px;
+/* Media Query -> sampai ukuran tablet 768px*/
+@media (max-width: 768px)  {
+    
+    .judul {
+        font-size: 32px;
     }
 
+    .paragraf {
+        font-size: 20px;
+    }
+
+
+    /* Home */
+    .home-huruf {
+        width: 50%;
+    }
+
+    .home-huruf .paragraf {
+        margin-top: 30px;
+    }
+
+
+    /* About */
+    .about-huruf {
+        width: 50%;
+    }
+
+    .about-huruf .paragraf {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .tombol-about-link-div {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tombol-about-link-div a {
+        width: 170px;
+        padding: 22px 12px;
+        font-size: 16px;
+    }
+
+
+    /* Player */
+    .player .judul {
+        margin-bottom: 70px;
+    }
+
+    .player .player-list {
+        width: 80%;
+    }
+}
+
+
+    /* Footer */
     .footer {
         padding-left: 30px;
     }
-}
+
+    .footer-signature, .footer-copyright, .footer-email, .footer-phone {
+        font-size: 14px;
+    }
 
 
 
