@@ -257,11 +257,11 @@ header, section, footer {
 @media (max-width: 768px)  {
     
     .judul {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .paragraf {
-        font-size: 20px;
+        font-size: 14px;
     }
 
 
@@ -294,8 +294,8 @@ header, section, footer {
 
     .tombol-about-link-div a {
         width: 170px;
-        padding: 22px 12px;
-        font-size: 16px;
+        padding: 18px 12px;
+        font-size: 14px;
     }
 
 
@@ -306,6 +306,7 @@ header, section, footer {
 
     .player .player-list {
         width: 50%;
+        font-size: 14px;
     }
 }
 
@@ -316,7 +317,7 @@ header, section, footer {
     }
 
     .footer-signature, .footer-copyright, .footer-email, .footer-phone {
-        font-size: 14px;
+        font-size: 10px;
     }
 
 
