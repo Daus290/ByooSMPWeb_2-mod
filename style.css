@@ -176,9 +176,14 @@ header, section, footer {
     min-height: 100vh;
 }
 
-.player h1 {
-    margin-bottom: 50px;
+.player .judul {
+    /* margin-bottom: 50px; */
     font-size: 35px;
+}
+
+.player .paragraf {
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .player .player-list-item {
@@ -265,6 +270,16 @@ header, section, footer {
     }
 
 
+    /* Navbar */
+    .nav-link::after {
+        left: 0;
+    }
+
+    .nav-link:hover::after {
+        width: 15%;
+    }
+
+
     /* Home */
     .home-huruf {
         width: 50%;
@@ -282,7 +297,7 @@ header, section, footer {
 
     .about-huruf .paragraf {
         margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 70px;
     }
 
     .tombol-about-link-div {
@@ -300,13 +315,23 @@ header, section, footer {
 
 
     /* Player */
-    .player .judul {
-        margin-bottom: 70px;
+    .player .paragraf {
+        margin-bottom: 70px
     }
 
     .player .player-list {
         width: 50%;
         font-size: 14px;
+    }
+
+    .player .player-list-item::after {
+        left: 0;
+        transform: translateX(40%);
+    }
+
+    .player .player-list-item:hover::before {
+        width: 150%;
+        left: 10%;
     }
 }
 
