@@ -44,7 +44,7 @@ header, section, footer {
     opacity: 1;
 }
 
-#header.scrolled::after {
+#header.scrolled::after { /*animasi scroll viewport*/
     opacity: 0;
 }
 
